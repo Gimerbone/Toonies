@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:toonies/utils/form_bloc.dart';
-import 'package:toonies/utils/form_event.dart';
-import 'package:toonies/model/form_item.dart';
-import 'package:toonies/utils/form_state.dart';
-import 'package:toonies/widgets/form_field.dart' as ff;
+import 'package:toonies/features/auth/presentation/bloc/form_bloc.dart';
+import 'package:toonies/features/auth/presentation/bloc/form_event.dart';
+import 'package:toonies/features/auth/data/model/form_item.dart';
+import 'package:toonies/features/auth/presentation/bloc/form_state.dart';
+import 'package:toonies/features/auth/presentation/widgets/form_field.dart'
+    as ff;
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

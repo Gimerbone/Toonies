@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:toonies/utils/auth_navigator.dart';
-import 'package:toonies/utils/form_bloc.dart';
-import 'package:toonies/utils/form_event.dart';
-import 'package:toonies/store/firebase.dart';
-import 'package:toonies/utils/constant.dart';
+import 'package:toonies/features/auth/presentation/utils/auth_gate.dart';
+import 'package:toonies/core/store/firebase.dart';
+import 'package:toonies/core/utils/constant.dart';
+import 'package:toonies/core/utils/format_converter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MainApp());
+  runApp(App());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class App extends StatelessWidget {
+  App({super.key});
+
+  final theme = ThemeData(
+    colorScheme: ColorScheme.fromSwatch(
+      primarySwatch: hexToMC("FF94C4"),
+      accentColor: hexToColor("FF94C4"),
+      backgroundColor: Colors.grey[100],
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +28,8 @@ class MainApp extends StatelessWidget {
       title: 'Toonies',
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      home: BlocProvider(
-        create: (context) => FormBloc()..add(const InitEvent()),
-        child: AuthNavigator(),
-      ),
+      theme: theme,
+      home: AuthGate(),
     );
   }
 }

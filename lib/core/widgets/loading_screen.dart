@@ -6,7 +6,7 @@ class LoadingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final spinner = SpinKitWave(color: Colors.grey);
+    final spinner = SpinKitFadingCircle(color: Colors.grey, size: 72);
 
     return Scaffold(body: Center(child: spinner));
   }
