@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:toonies/core/widgets/loading_screen.dart';
+import 'package:toonies/core/widgets/loading.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
