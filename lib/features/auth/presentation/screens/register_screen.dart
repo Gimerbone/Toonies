@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:toonies/features/auth/presentation/utils/export.dart';
 
 class RegisterScreen extends StatelessWidget {
   @override

@@ -1,4 +1,4 @@
-import 'package:toonies/features/auth/presentation/utils/export_bloc.dart';
+import 'package:toonies/features/auth/presentation/utils/export.dart';
 
 abstract class FormScreenEvent extends Equatable {
   const FormScreenEvent();
