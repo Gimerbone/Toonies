@@ -1,8 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:toonies/core/widgets/loading_screen.dart';
+import 'package:toonies/core/widgets/loading.dart';
+import 'package:toonies/features/auth/presentation/utils/export.dart';
 import 'package:toonies/features/movies/presentation/screens/main_screen.dart';
-import 'package:toonies/features/auth/presentation/utils/auth_navigator.dart';
 
 class AuthGate extends StatelessWidget {
   @override
