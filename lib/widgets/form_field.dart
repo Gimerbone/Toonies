@@ -9,7 +9,6 @@ class FormField extends StatelessWidget {
     this.validator,
     this.onChange,
   });
-
   final String hintText;
   final List<TextInputFormatter>? inputFormatters;
   final String? Function(String?)? validator;
@@ -18,7 +17,7 @@ class FormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsGeometry.all(8),
+      padding: const EdgeInsets.all(8.0),
       child: TextFormField(
         inputFormatters: inputFormatters,
         validator: validator,

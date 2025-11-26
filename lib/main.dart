@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:toonies/utils/form_bloc.dart';
+import 'package:toonies/utils/form_event.dart';
 import 'package:toonies/store/firebase.dart';
-import 'package:toonies/screens/LoginScreen.dart';
+import 'package:toonies/screens/login_screen.dart';
+import 'package:toonies/utils/constant.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,8 +21,11 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       title: 'Toonies',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.orange)),
-      home: const LoginScreen(),
+      navigatorKey: navigatorKey,
+      home: BlocProvider(
+        create: (context) => FormBloc()..add(const InitEvent()),
+        child: const LoginScreen(),
+      ),
     );
   }
 }
