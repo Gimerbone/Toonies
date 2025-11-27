@@ -1,42 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:toonies/core/widgets/loading.dart';
+import 'package:toonies/features/movies/presentation/widgets/top_bar.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Row(
-                children: [
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundImage: AssetImage('assets/profile.png'),
-                  ),
-                  Column(
-                    children: [Text("Hi, User!"), Text("Let's watch a movie")],
-                  ),
-                ],
-              ),
-              Row(),
-            ],
-          ),
-          Container(),
-          Row(),
-          ListView.builder(
-            itemBuilder: (context, index) {
-              return Placeholder();
-            },
-          ),
-          Row(),
-          Column(),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
+          children: [
+            TopBar(),
+            Container(),
+            Row(),
+            // ListView.builder(
+            //   itemBuilder: (context, index) {
+            //     return Placeholder();
+            //   },
+            // ),
+            Row(),
+            Column(),
+          ],
+        ),
+        bottomNavigationBar: _NavBar(),
       ),
-      bottomNavigationBar: _NavBar(),
     );
   }
 }

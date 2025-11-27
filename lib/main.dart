@@ -20,6 +20,7 @@ class App extends StatelessWidget {
       accentColor: hexToColor("FF94C4"),
       backgroundColor: Colors.grey[100],
     ),
+    fontFamily: 'Poppins',
   );
 
   @override
