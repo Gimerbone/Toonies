@@ -1,6 +1,6 @@
 import 'package:toonies/core/widgets/loading.dart';
 import 'package:toonies/features/auth/presentation/utils/export.dart';
-import 'package:toonies/features/movies/presentation/screens/main_screen.dart';
+import 'package:toonies/features/movies/presentation/screens/main_layout.dart';
 
 class AuthGate extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class AuthGate extends StatelessWidget {
         }
 
         if (snapshot.hasData) {
-          return const MainScreen();
+          return MainLayout();
         }
 
         return const AuthNavigator();

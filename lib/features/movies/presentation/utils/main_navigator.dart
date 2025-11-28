@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:toonies/features/movies/presentation/screens/home_screen.dart';
-import 'package:toonies/features/movies/presentation/screens/profile_screen.dart';
+import 'package:toonies/features/movies/presentation/utils/export.dart';
 
 class MainNavigator extends StatelessWidget {
   @override

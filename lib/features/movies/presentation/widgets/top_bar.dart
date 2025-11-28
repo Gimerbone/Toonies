@@ -5,45 +5,53 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(8.0),
-      color: Colors.grey,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              Padding(
-                padding: EdgeInsetsGeometry.fromLTRB(8, 0, 0, 0),
-                child: CircleAvatar(
-                  radius: 16,
-                  backgroundImage: AssetImage('assets/logo.png'),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Row(
+          children: [
+            CircleAvatar(
+              radius: 16,
+              backgroundImage: AssetImage('assets/logo.png'),
+            ),
+            SizedBox(width: 16),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Hi, User!",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
                 ),
-              ),
-              SizedBox(width: 16),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [Text("Hi, User!"), Text("Let's watch a movie")],
-              ),
-            ],
-          ),
+                SizedBox(height: 2),
+                Text(
+                  "Let's watch a movie",
+                  style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10),
+                ),
+              ],
+            ),
+          ],
+        ),
 
-          Row(
-            children: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.search),
-                iconSize: 24,
+        Row(
+          children: [
+            InkWell(
+              onTap: () {},
+              child: Padding(
+                padding: EdgeInsets.all(4), // control exactly how much you want
+                child: Icon(Icons.search, size: 24),
               ),
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.notifications_none),
-                iconSize: 24,
+            ),
+            SizedBox(width: 4),
+            InkWell(
+              onTap: () {},
+              child: Padding(
+                padding: EdgeInsets.all(4), // control exactly how much you want
+                child: Icon(Icons.notifications_none, size: 24),
               ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

@@ -1,9 +1,10 @@
 import 'package:toonies/features/movies/presentation/utils/export.dart';
 
-class ProfileScreen extends StatelessWidget {
+class SearchScreen extends StatelessWidget {
+  const SearchScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return const Placeholder();
   }
 }
