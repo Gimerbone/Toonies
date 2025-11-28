@@ -1,0 +1,12 @@
+export 'package:flutter/material.dart';
+export 'package:flutter_bloc/flutter_bloc.dart';
+export 'package:toonies/features/movies/presentation/bloc/nav_cubit.dart';
+export 'package:toonies/features/movies/presentation/widgets/top_bar.dart';
+export 'package:toonies/features/movies/presentation/screens/home_screen.dart';
+export 'package:toonies/features/movies/presentation/screens/profile_screen.dart';
+export 'package:toonies/features/movies/presentation/screens/search_screen.dart';
+export 'package:toonies/features/movies/presentation/screens/watchlist_screen.dart';
+export 'package:toonies/features/movies/presentation/widgets/nav_item.dart';
+export 'package:toonies/features/movies/presentation/widgets/nav_bar.dart';
+export 'package:toonies/features/movies/presentation/widgets/hero_card.dart';
+export 'package:toonies/features/movies/presentation/widgets/movie_carousel.dart';
